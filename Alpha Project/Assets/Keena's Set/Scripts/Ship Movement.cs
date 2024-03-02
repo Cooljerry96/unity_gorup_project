@@ -11,8 +11,8 @@ public class ShipMovement : MonoBehaviour
     private float turnInput;
     public float speed = 1f;
     public float turnSpeed = 2f;
-    public float forwardDrift = 0f;
-    public float turnDrift = 0f;
+    public float forwardDrift = 0.5f;
+    public float turnDrift = 1f;
     public Rigidbody rb;
 
 
