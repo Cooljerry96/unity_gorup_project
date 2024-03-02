@@ -12,19 +12,31 @@ public class OutofBoundTP : MonoBehaviour
     //Left Right Bounds
     private float rightBound = 100f;
     private float leftBound = -100f;
+
     //RigidBody Variable
     public Rigidbody rb;
+    public bool screenWrapping = true;
 
     // Start is called before the first frame update
     private void Awake()
     {
-        //makes the RigidBody Constatly run
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
+        //Call Screen Warp
+        if (screenWrapping)
+        {
+            ScreenWrap();
+
+        }
+    }
+
+    //ScreenWarp function
+     private void ScreenWrap()
+    { 
         //Position Variables
         float x = rb.position.x;
         float y = rb.position.y;
