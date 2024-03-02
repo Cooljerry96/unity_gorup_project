@@ -6,12 +6,12 @@ using UnityEngine.UIElements;
 public class OutofBoundTP : MonoBehaviour
 {
     //Top and bottom Bounds
-    private float topBound = 100f;
-    private float lowerBound = -100f;
+    private float topBound = 800f;
+    private float lowerBound = -800f;
 
     //Left Right Bounds
-    private float rightBound = 100f;
-    private float leftBound = -100f;
+    private float rightBound = 800f;
+    private float leftBound = -800f;
 
     //RigidBody Variable
     public Rigidbody rb;
