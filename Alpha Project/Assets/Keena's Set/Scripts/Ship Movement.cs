@@ -11,6 +11,8 @@ public class ShipMovement : MonoBehaviour
     private float turnInput;
     public float speed = 1f;
     public float turnSpeed = 2f;
+    public float forwardDrift = 0f;
+    public float turnDrift = 0f;
     public Rigidbody rb;
 
 
@@ -42,13 +44,15 @@ public class ShipMovement : MonoBehaviour
 
         if (forwardInput)
         {
-            rb.AddForce(transform.forward * speed);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            rb.AddForce(transform.forward * forwardDrift);
         }
         
 
         if (turnInput != 0f)
         {
-            rb.AddTorque(transform.up * turnInput * turnSpeed);
+            transform.Rotate(Vector3.up * turnInput * turnSpeed);
+            rb.AddTorque(transform.up * turnInput * turnDrift);
         }
 
        
