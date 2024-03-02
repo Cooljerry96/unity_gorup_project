@@ -41,9 +41,7 @@ public class ShipMovement : MonoBehaviour
         {
             turnInput = 0f;
         }
-
-        transform.Translate(Vector3.forward * constantSpeed);
-
+       
         if (forwardInput)
         {
             transform.Translate(Vector3.forward * constantSpeed);
