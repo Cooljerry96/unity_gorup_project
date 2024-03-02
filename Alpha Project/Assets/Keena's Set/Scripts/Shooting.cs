@@ -11,6 +11,8 @@ public class Shooting : MonoBehaviour
     private GameObject newProjectile;
     private float myTime = 0.0f;
 
+    public float shotDistance = 6f;
+
     void Update()
     {
         //Pew Pew
@@ -34,7 +36,7 @@ public class Shooting : MonoBehaviour
     {
         float elapsedTime = 0;
         Vector3 startPosition = projectile.transform.position;
-        Vector3 endPosition = startPosition + transform.forward * 3;
+        Vector3 endPosition = startPosition + transform.forward * shotDistance;
 
         //Fire direction im looking
 
@@ -44,7 +46,7 @@ public class Shooting : MonoBehaviour
             projectile.transform.position = Vector3.Lerp(startPosition, endPosition, (elapsedTime / animationDuration));
             yield return null;
         }
-        //Get that shit out my house # SUCK IT ALEX
+
         Destroy(projectile);
     }
 }
