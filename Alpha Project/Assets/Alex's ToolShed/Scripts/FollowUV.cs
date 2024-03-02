@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowUV : MonoBehaviour
 {
-    float parrallax = 2f;
+    public float parrallax = 2f;
     
     // Start is called before the first frame update
     void Start()
