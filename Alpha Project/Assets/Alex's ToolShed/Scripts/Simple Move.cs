@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SimpleMove : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 40.0f;
     public float horizontalInput;
-    public float VerticalInput;
+    public float verticalInput;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,10 @@ public class SimpleMove : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        VerticalInput = Input.GetAxis("Vertical");
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * speed * verticalInput * Time.deltaTime);
+        transform.Rotate(Vector3.up * speed * horizontalInput * Time.deltaTime);
 
-        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
-        transform.Translate(Vector3.forward * VerticalInput * speed * Time.deltaTime);
     }
 }
+
