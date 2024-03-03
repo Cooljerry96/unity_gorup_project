@@ -5,11 +5,17 @@ using UnityEngine.UIElements;
 
 public class OutofBoundTP : MonoBehaviour
 {
-    private float topBound = 3.9f;
-    private float lowerBound = -3.9f;
-    private float rightBound = 6.9f;
-    private float leftBound = -6.9f;
+    //Top and bottom Bounds
+    private float topBound = 800f;
+    private float lowerBound = -800f;
+
+    //Left Right Bounds
+    private float rightBound = 800f;
+    private float leftBound = -800f;
+
+    //RigidBody Variable
     public Rigidbody rb;
+    public bool screenWrapping = true;
 
     // Start is called before the first frame update
     private void Awake()
@@ -18,13 +24,25 @@ public class OutofBoundTP : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        //Call Screen Warp
+        if (screenWrapping)
+        {
+            ScreenWrap();
+
+        }
+    }
+
+    //ScreenWarp function
+     private void ScreenWrap()
+    { 
+        //Position Variables
         float x = rb.position.x;
         float y = rb.position.y;
         float z = rb.position.z;
 
+        //Teleports
         if (transform.position.z > topBound)
         {
             rb.position = new Vector3(x, y, lowerBound);
