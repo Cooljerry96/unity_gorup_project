@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a718c138b20419b499c3d92b17e6ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tumble: 0.25
+  tumble: 0
 --- !u!65 &-1642993013536756648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -163,14 +163,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5550228418011883952}
-  sprites:
-  - {fileID: 2247582541959332287}
-  - {fileID: 141316, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75, type: 3}
-  - {fileID: 130102, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
+  asteroids: []
   size: 1
   minSize: 0.35
   maxSize: 1.65
-  movementSpeed: 50
+  movementSpeed: 0.25
   maxLifetime: 30
 --- !u!1 &2569635822739398667
 GameObject:
