@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 469044}
   - component: {fileID: 5428902}
   - component: {fileID: 11467940}
+  - component: {fileID: -2428952219584274803}
   m_Layer: 0
   m_Name: Asteroid 3 Large
   m_TagString: Enemy
@@ -135,7 +136,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a718c138b20419b499c3d92b17e6ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tumble: 0.14
+  tumble: 0.25
+--- !u!65 &-2428952219584274803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130102}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5779985, y: 2.2523305, z: 2.155999}
+  m_Center: {x: 0.019266753, y: -0.08669992, z: 0.15413387}
 --- !u!1 &153142
 GameObject:
   m_ObjectHideFlags: 0
