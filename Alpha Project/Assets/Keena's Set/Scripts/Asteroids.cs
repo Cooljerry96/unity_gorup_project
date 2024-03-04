@@ -8,7 +8,7 @@ public class Asteroid : MonoBehaviour
     public Rigidbody rb;
 
     [SerializeField]
-    public GameObject[] asteroids;
+    
 
     public float size = 1f;
     public float minSize = 0.35f;
@@ -36,7 +36,7 @@ public class Asteroid : MonoBehaviour
     }
     private void Update()
     {
-        //transform.Translate(Vector3.forward * movementSpeed);
+        transform.Translate(Vector3.forward * movementSpeed);
     }
     public void SetTrajectory(Vector3 direction)
     {

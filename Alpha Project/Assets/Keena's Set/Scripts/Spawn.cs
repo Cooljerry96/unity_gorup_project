@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Spawner : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Spawner : MonoBehaviour
     public float spawnDistance = 50f;
     public float spawnRate = 1f;
     public int amountPerSpawn = 1;
-    public float trajectoryVariance = 15f;
+    public float trajectoryVariance = 0f;
     private Vector3[] vectors = new Vector3[4];
 
     private void Awake()
@@ -39,7 +40,7 @@ public class Spawner : MonoBehaviour
       
             // Choose a random direction from the center of the spawner and
             // spawn the asteroid a distance away
-            Vector3 spawnDirection = Random.insideUnitSphere;
+            Vector3 spawnDirection = new Vector3(0,0,0);
             vectors[0] = new Vector3(leftRange, 0f , Random.Range(topRange,bottomRange));
             vectors[1] = new Vector3(rightRange, 0f, Random.Range(topRange, bottomRange));
             vectors[2] = new Vector3(Random.Range(leftRange, rightRange), 0f, topRange);
@@ -48,15 +49,20 @@ public class Spawner : MonoBehaviour
             // Calculate a random variance in the asteroid's rotation which will
             // cause its trajectory to change
             float variance = Random.Range(-trajectoryVariance, trajectoryVariance);
-            Quaternion rotation = Quaternion.AngleAxis(variance, vectors[Random.Range(0,4)]);
+            Quaternion rotation = Quaternion.AngleAxis( variance, spawnDirection);
 
             // Create the new asteroid by cloning the prefab and set a random
             // size within the range
-            Asteroid asteroid = Instantiate(asteroidPrefab[Random.Range(0, asteroidPrefab.Length)], vectors[Random.Range(0,4)], rotation);
+            Asteroid asteroid = Instantiate(asteroidPrefab[Random.Range(0, asteroidPrefab.Length)], vectors[Random.Range(0,4)], rotation );
             asteroid.size = Random.Range(asteroid.minSize, asteroid.maxSize);
 
+            if (asteroid.transform.position == vectors[0])
+            {
+                asteroid.transform.rotation = new Quaternion(0f, Random.Range(220, 130), 0f, 0f);
+            }
             
         }
+       
     }
 
 }
