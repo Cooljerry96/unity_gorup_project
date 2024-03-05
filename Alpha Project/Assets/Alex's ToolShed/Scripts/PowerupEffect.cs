@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class PowerupEffect : ScriptableObject
 {
     public abstract void apply(GameObject target);
+  
 }
 /*
  PowerUps!
@@ -14,4 +15,5 @@ Bomb
 Sheild
 Shotgun
 DoubleShip
+
 */
