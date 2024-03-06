@@ -97,8 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5550228418011883952}
-  player:
-  - {fileID: 0}
+  player: {fileID: 6277654115768301454, guid: 0f374c02a20010b4dbd7aa351114fe82, type: 3}
   size: 1
   minSize: 0.35
   maxSize: 1.65

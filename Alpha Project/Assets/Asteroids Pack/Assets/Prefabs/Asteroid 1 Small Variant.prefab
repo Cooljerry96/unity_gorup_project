@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid 1 Small Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2924571933098305901, guid: 7ecc1bd33691dfe47921c5cb18df85e6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6277654115768301454, guid: 0f374c02a20010b4dbd7aa351114fe82, type: 3}
     - target: {fileID: 6608268168452735908, guid: 7ecc1bd33691dfe47921c5cb18df85e6, type: 3}
       propertyPath: tumble
       value: 0.36

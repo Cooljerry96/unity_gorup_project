@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8640112061595336267, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6277654115768301454, guid: 0f374c02a20010b4dbd7aa351114fe82, type: 3}
     - target: {fileID: 130102, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
       propertyPath: m_Name
       value: Asteroid 3 Small Variant

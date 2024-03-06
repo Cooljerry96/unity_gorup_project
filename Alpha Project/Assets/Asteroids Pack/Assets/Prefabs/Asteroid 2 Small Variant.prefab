@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: tumble
       value: 0.36
       objectReference: {fileID: 0}
+    - target: {fileID: 7813969805450994231, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6277654115768301454, guid: 0f374c02a20010b4dbd7aa351114fe82, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
