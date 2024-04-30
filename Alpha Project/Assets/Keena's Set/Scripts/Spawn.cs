@@ -81,22 +81,22 @@ public class Spawner : MonoBehaviour
             {
                 asteroid.transform.rotation = Quaternion.AngleAxis(Random.Range(-45, 45), Vector3.up);
             }
-            if (asteroid.transform.position.x > rightRange + 5)
-            {
-                Destroy(asteroid);
-            }
-            if (asteroid.transform.position.x < leftRange - 5)
-            {
-                Destroy(asteroid);
-            }
-            if (asteroid.transform.position.z > topRange + 5)
-            {
-                Destroy(asteroid);
-            }
-            if (asteroid.transform.position.z < bottomRange - 5)
-            {
-                Destroy(asteroid);
-            }
+            //if (asteroid.transform.position.x > rightRange + 5)
+            //{
+                //Destroy(asteroid);
+            //}
+            //if (asteroid.transform.position.x < leftRange - 5)
+            //{
+                //Destroy(asteroid);
+            //}
+            //if (asteroid.transform.position.z > topRange + 5)
+            //{
+                //Destroy(asteroid);
+            //}
+            //if (asteroid.transform.position.z < bottomRange - 5)
+            //{
+                //Destroy(asteroid);
+            //}
         }
     }
     }

@@ -37,21 +37,22 @@ public class Asteroid : MonoBehaviour
     }
     private void Update()
     {
+        Vector3 playerPos = new Vector3(player.transform.position.x,player.transform.position.y,player.transform.position.z);
         transform.Translate(Vector3.forward * movementSpeed);
 
-        if (this.transform.position.x > player.transform.position.x + 110)
+        if (this.transform.position.x > playerPos.x + 55)
         {
             Destroy(gameObject);
         }
-        if (this.transform.position.x < player.transform.position.x - 110)
+        if (this.transform.position.x < playerPos.x - 55)
         {
             Destroy(gameObject);
         }
-        if (this.transform.position.z > player.transform.position.z + 110)
+        if (this.transform.position.z > playerPos.z + 55)
         {
             Destroy(gameObject);
         }
-        if (this.transform.position.z < player.transform.position.z - 110)
+        if (this.transform.position.z < playerPos.z - 55)
         {
             Destroy(gameObject);
         }
